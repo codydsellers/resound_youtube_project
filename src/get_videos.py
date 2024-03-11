@@ -41,7 +41,7 @@ def get_channel_videos(channel_id):
                 video_title = detail['snippet']['title']
                 video_description = detail['snippet']['description']
                 results.append((video_id, video_url, video_title, video_description))
-                time.sleep(0.1)  # Add a delay of 0.05 seconds between each API call
+                time.sleep(0.25)  # Add a delay of 0.05 seconds between each API call
     except HttpError as e:
         print(f'An HTTP error {e.resp.status} occurred:\n{e.content}')
     return results
