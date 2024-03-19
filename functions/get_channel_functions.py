@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 # Function to search for YouTube channel
 def search_youtube_channel(api_key, cse_id, business_name):
     service = build("customsearch", "v1", developerKey=api_key)
-    res = service.cse().list(q=f'{business_name} Youtube Channel', cx=cse_id).execute()
+    res = service.cse().list(q=f'{business_name} Accounting Firm Youtube Channel', cx=cse_id).execute()
     for item in res.get('items', []):
         if 'youtube.com/channel' in item['link']:
             return item['link']  # Return the channel URL

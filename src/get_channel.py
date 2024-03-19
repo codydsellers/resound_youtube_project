@@ -47,4 +47,4 @@ merged_df = pd.merge(original_df, youtube_df[['firm_name', 'cleaned_youtube_url'
 
 # Save the merged DataFrame to the 'output' directory without the index
 output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
-merged_df.to_csv(os.path.join(output_dir, 'accounting_businesses_updated_test.csv'), index=False)
+merged_df.to_csv(os.path.join(output_dir, 'accounting_businesses_updated.csv'), index=False)

@@ -72,4 +72,4 @@ merged_df = pd.merge(df, stats_df, on='channel_id', how='left')
 output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
 
 # Save the merged DataFrame back to CSV, updating the original file
-merged_df.to_csv(os.path.join(output_dir, 'accounting_businesses_updated.csv'), index=False)
+merged_df.to_csv(os.path.join(output_dir, 'accounting_businesses_updated_with_stats.csv'), index=False)
